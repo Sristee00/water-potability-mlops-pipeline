@@ -22,7 +22,7 @@ def model_predict(water: Water):
           'ph' : [water.ph],
         'Hardness' : [water.Hardness],
         'Solids' : [water.Solids],
-        'Chloramine' : [water.Chloramines],
+        'Chloramines' : [water.Chloramines],
         'Sulfate' : [water.Sulfate],
         'Conductivity' : [water.Conductivity],
         'Organic_carbon' : [water.Organic_carbon],
