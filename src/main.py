@@ -30,11 +30,14 @@ def model_predict(water: Water):
         'Turbidity' : [water.Turbidity]
     })
 
-    prediction = model.predict(sample)
+    prediction = model.predict(sample)[0]
 
     if prediction == 1:
         result = "Water is potable"
     else:
         result = "Water is not potable"
 
-    
+    return {
+        "prediction": int(prediction),
+        "result": result
+    }
