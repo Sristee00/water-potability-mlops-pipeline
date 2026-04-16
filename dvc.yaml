@@ -3,6 +3,8 @@ stages:
     cmd: python src/data_collection.py
     deps:
     - src/data_collection.py
+    params:
+    - data_collection.test_size
     outs:
     - data/raw
 
@@ -30,6 +32,8 @@ stages:
     deps:
     - data/featured
     - src/model_building.py
+    params:
+    - model_building.n_estimators
     outs:
     - model.pkl
 
